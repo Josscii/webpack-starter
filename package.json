@@ -1,0 +1,43 @@
+{
+  "name": "my-first-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "webpack --config webpack.dev.config.js",
+    "build-prod": "webpack --config webpack.prod.config.js",
+    "build-public": "webpack -d --mode production --config webpack.public.config.js",
+    "build-admin": "webpack -d --mode production --config webpack.admin.config.js",
+    "build-1": "npm run build-public; npm run-build-admin",
+    "build-frontend": "webpack -d --mode production --config webpack.frontend.config.js",
+    "build-server": "webpack -d --mode production --config webpack.server.config.js",
+    "build-2": "npm run build-frontend; npm run-build-server",
+    "start": "webpack-dev-server --hot --config webpack.dev.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+    "babel-loader": "^8.2.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "react-refresh": "^0.11.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
