@@ -1,4 +1,5 @@
 const { merge } = require("webpack-merge");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const base = require("./webpack.base.config");
 
 const config = {
@@ -8,6 +9,7 @@ const config = {
       directory: "./dist",
     },
   },
+  plugins: [new ReactRefreshWebpackPlugin()].filter(Boolean),
 };
 
 module.exports = merge(base, config);
